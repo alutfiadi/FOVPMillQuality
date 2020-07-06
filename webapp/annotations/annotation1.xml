@@ -1,0 +1,351 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/opu/odata/sap/ZADQTYALL_Q004_SRV/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="ZADQTYALL_Q004_SRV"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="MillQualityOVP2.annotations.annotation1.ZADQTYALL_Q004_SRV">
+			<Annotations Target="Metadata.ZADQTYALL_Q004Result">
+				<Annotation Term="UI.PresentationVariant" Qualifier="PKTrend">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.Chart#PKTrend</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="PKTrend">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Text" String="PK Quality Trend"/>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="A4ZADQTYALLZCHQTYF"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" String="Broken"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.KPI" Qualifier="PKTrend">
+					<Record Type="UI.KPIType">
+						<PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#PKTrend"/>
+						<PropertyValue Property="DataPoint" Path="@UI.DataPoint#DPProportion3"/>
+						<PropertyValue Property="Detail">
+							<Record Type="UI.KPIDetailType">
+								<PropertyValue Property="DefaultPresentationVariant" Path="@UI.PresentationVariant#PKTrend"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification" Qualifier="PKTrend">
+					<Collection/>
+				</Annotation>
+				<Annotation Term="UI.Chart" Qualifier="PKTrend">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line"/>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>PROPORTION</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="PROPORTION"/>
+									<PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#DPProportion"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>A0FISCPER_T</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="A0FISCPER_T"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.PresentationVariant" Qualifier="PKPlant">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.Chart#PKPlant</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="PKPlant">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Text" String="PK Quality Trend"/>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="A4ZADQTYALLZCHQTYF"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" String="Broken"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.KPI" Qualifier="PKPlant">
+					<Record Type="UI.KPIType">
+						<PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#PKPlant"/>
+						<PropertyValue Property="DataPoint" Path="@UI.DataPoint#DPProportion2"/>
+						<PropertyValue Property="Detail">
+							<Record Type="UI.KPIDetailType">
+								<PropertyValue Property="DefaultPresentationVariant" Path="@UI.PresentationVariant#PKPlant"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification" Qualifier="PKPlant">
+					<Collection/>
+				</Annotation>
+				<Annotation Term="UI.Chart" Qualifier="PKPlant">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>PROPORTION</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="PROPORTION"/>
+									<PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#DPProportion"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>A4ZADQTYALLZCHPLANT</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="A4ZADQTYALLZCHPLANT"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.PresentationVariant" Qualifier="PKQuality">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.Chart#PKQuality</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="PKQuality">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Text" String="PK Quality Metrics"/>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="A4ZADQTYALLZCHQTYF"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" String="Broken"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.KPI" Qualifier="PKQuality">
+					<Record Type="UI.KPIType">
+						<PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#PKQuality"/>
+						<PropertyValue Property="DataPoint" Path="@UI.DataPoint#DPProportion"/>
+						<PropertyValue Property="Detail">
+							<Record Type="UI.KPIDetailType">
+								<PropertyValue Property="DefaultPresentationVariant" Path="@UI.PresentationVariant#PKQuality"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification" Qualifier="PKQuality">
+					<Collection/>
+				</Annotation>
+				<Annotation Term="UI.Chart" Qualifier="PKQuality">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/VerticalBullet"/>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>PROPORTION</PropertyPath>
+								<PropertyPath>RNG</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="PROPORTION"/>
+									<PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#DPProportion"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+								</Record>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="RNG"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis2"/>
+									<PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#DPRange"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>A4ZADQTYALLZCHQTYF</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="A4ZADQTYALLZCHQTYF"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>A0FISCYEAR</PropertyPath>
+						<PropertyPath>A0FISCPER3</PropertyPath>
+						<PropertyPath>A4ZADQTYALLZCHPLANT</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="DPProportion3">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="PROPORTION"/>
+						<PropertyValue Property="ValueFormat">
+							<Record Type="UI.NumberFormat">
+								<PropertyValue Property="ScaleFactor" Decimal="100"/>
+								<PropertyValue Property="NumberOfFractionalDigits" Int="3"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="CriticalityCalculation">
+							<Record Type="UI.CriticalityCalculationType">
+								<PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Minimize"/>
+								<PropertyValue Property="DeviationRangeLowValue" String="0.44"/>
+								<PropertyValue Property="DeviationRangeHighValue" String="0.30"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="TargetValue" String="0.40"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="DPProportion2">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="PROPORTION"/>
+						<PropertyValue Property="ValueFormat">
+							<Record Type="UI.NumberFormat">
+								<PropertyValue Property="ScaleFactor" Decimal="100"/>
+								<PropertyValue Property="NumberOfFractionalDigits" Int="3"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="CriticalityCalculation">
+							<Record Type="UI.CriticalityCalculationType">
+								<PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Minimize"/>
+								<PropertyValue Property="DeviationRangeLowValue" String="0.44"/>
+								<PropertyValue Property="DeviationRangeHighValue" String="0.30"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="TargetValue" String="0.40"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="DPProportion">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="PROPORTION"/>
+						<PropertyValue Property="ValueFormat">
+							<Record Type="UI.NumberFormat">
+								<PropertyValue Property="ScaleFactor" Decimal="100"/>
+								<PropertyValue Property="NumberOfFractionalDigits" Int="5"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="CriticalityCalculation">
+							<Record Type="UI.CriticalityCalculationType">
+								<PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Minimize"/>
+								<PropertyValue Property="DeviationRangeLowValue" String="0.44"/>
+								<PropertyValue Property="DeviationRangeHighValue" String="0.30"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="TargetValue" String="0.40"/>
+						<PropertyValue Property="TrendCalculation">
+							<Record Type="UI.TrendCalculationType">
+								<PropertyValue Property="ReferenceValue" Path="RNG"/>
+								<PropertyValue Property="UpDifference" Decimal="0.01"/>
+								<PropertyValue Property="StrongUpDifference" Decimal="0.1"/>
+								<PropertyValue Property="DownDifference" Decimal="0.05"/>
+								<PropertyValue Property="StrongDownDifference" Decimal="0.5"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="DPYear">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="A0FISCYEAR"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="DPPeriod">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="A0FISCPER3"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="DPPlant">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="A4ZADQTYALLZCHPLANT"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="DPRegion">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="ZCHREGION"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="DPQuality">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="A4ZADQTYALLZCHQTYF"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="DPRange">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="RNG"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
